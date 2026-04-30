@@ -1,0 +1,59 @@
+{
+  "name": "home-base",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "tsx tests/safety.test.ts && tsx tests/audit-smoke.test.ts && tsx tests/health-smoke.test.ts && tsx tests/core-schema-smoke.test.ts && tsx tests/core-normalize.test.ts && tsx tests/customer-api-smoke.test.ts && tsx tests/vehicle-api-smoke.test.ts && tsx tests/vendor-api-smoke.test.ts && tsx tests/core-search-smoke.test.ts && tsx tests/core-entities-smoke.test.ts && tsx tests/sales-schema-smoke.test.ts && tsx tests/shop-schema-smoke.test.ts && tsx tests/sales-normalize.test.ts && tsx tests/shop-helpers.test.ts && tsx tests/product-api-smoke.test.ts && tsx tests/pricebook-api-smoke.test.ts && tsx tests/lead-api-smoke.test.ts && tsx tests/opportunity-api-smoke.test.ts && tsx tests/activity-api-smoke.test.ts && tsx tests/quote-api-smoke.test.ts && tsx tests/quote-pdf-smoke.test.ts && tsx tests/case-api-smoke.test.ts && tsx tests/sales-goal-api-smoke.test.ts && tsx tests/sales-smoke.test.ts && tsx tests/work-order-api-smoke.test.ts && npm run test:shop && tsx tests/lens-schema-smoke.test.ts && tsx tests/lens-webhook-smoke.test.ts && tsx tests/lens-share-smoke.test.ts && tsx tests/lens-smoke.test.ts && tsx tests/gauge-api-smoke.test.ts && tsx tests/admin-api-smoke.test.ts && tsx tests/admin-exceptions-smoke.test.ts && tsx tests/admin-flags-smoke.test.ts && tsx tests/admin-impersonation-smoke.test.ts && tsx tests/reports-dashboard-smoke.test.ts && tsx tests/service-reports-smoke.test.ts && tsx tests/sales-reports-smoke.test.ts && tsx tests/reports-export-smoke.test.ts && tsx tests/parts-reports-smoke.test.ts && tsx tests/closeout-reports-smoke.test.ts && tsx tests/reports-layout-smoke.test.ts && tsx tests/reports-pdf-smoke.test.ts && tsx tests/email-templates-smoke.test.ts && tsx tests/webhooks-smoke.test.ts && tsx tests/cron-webhooks-smoke.test.ts && tsx tests/api-keys-smoke.test.ts && tsx tests/billing-smoke.test.ts && tsx tests/demo-seed-smoke.test.ts",
+    "test:shop": "tsx tests/bay-api-smoke.test.ts && tsx tests/work-order-status-smoke.test.ts && tsx tests/time-entry-api-smoke.test.ts && tsx tests/parts-api-smoke.test.ts && tsx tests/estimate-api-smoke.test.ts && tsx tests/change-order-api-smoke.test.ts && tsx tests/inspection-api-smoke.test.ts && tsx tests/warranty-api-smoke.test.ts",
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "tsx prisma/seed.ts",
+    "seed:demo": "tsx scripts/seed-demo.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1032.0",
+    "@aws-sdk/s3-request-presigner": "^3.1032.0",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@heroicons/react": "^2.2.0",
+    "@prisma/adapter-pg": "^7.7.0",
+    "@prisma/client": "^7.7.0",
+    "bcryptjs": "^3.0.3",
+    "date-fns": "^4.1.0",
+    "easymde": "^2.20.0",
+    "lucide-react": "^1.8.0",
+    "next": "14.2.35",
+    "pdf-lib": "^1.17.1",
+    "pg": "^8.20.0",
+    "prisma": "^7.7.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-markdown": "^10.1.0",
+    "react-simplemde-editor": "^5.2.0",
+    "recharts": "^3.8.1",
+    "remark-gfm": "^4.0.1",
+    "resend": "^6.12.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}
